@@ -1,0 +1,19 @@
+{
+  "name": "escalera",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GregoryInnovo/escalera.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GregoryInnovo/escalera/issues"
+  },
+  "homepage": "https://github.com/GregoryInnovo/escalera#readme"
+}
