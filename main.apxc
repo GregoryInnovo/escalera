@@ -1,0 +1,40 @@
+public class main {
+	public Integer currentPosition = 0;
+    public List <Integer> board = new List<Integer>{0, 0, 11, 0, 0, 17, 0, 0, 18, 12, 0, 0, 0, 4, 0, 0, 0, 0, 8, 0, 0, 20, 0, 16,0,0,0,0,0,0,0};
+    
+    public void game() {
+        while (currentPosition < 25) {
+            Integer diceNum = getRandomNumber();
+            System.debug('Dado arroja:'+ diceNum);
+            move(diceNum);
+  		}
+  		System.debug('Fin');
+    }
+    
+    public Integer getRandomNumber () {
+        return Integer.valueOf(Math.random() * (7-1) +1);
+    }
+    
+    public void move(Integer steps) {
+      Integer definePosition = currentPosition + steps;
+      Integer boardValue = board.get(definePosition-1);
+    
+      if (boardValue == 0) {
+        currentPosition += steps; 
+          if(currentPosition > 25) {
+              System.debug('Jugador supera el cuadro 25');
+          } else {
+              System.debug('Jugador avanza a cuadro: '+ currentPosition);
+          }
+      } else {
+        currentPosition = boardValue;
+        if (definePosition < currentPosition) {
+          System.debug('Jugador sube por escalera al cuadro '+ currentPosition);
+        } else {
+          if(boardValue != 0 && currentPosition != null) {
+              System.debug('Jugador desciende al cuadro '+ currentPosition);
+          } 
+        }
+      }
+    }
+}
