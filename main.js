@@ -32,7 +32,7 @@ function move(steps) {
   let definePosition = currentPosition + steps;
   let boardValue = board[definePosition - 1];
 
-  // In this conditional the game examine if the board value is different than 0
+  // In this conditional the game examines if the board value is different than 0
   if (boardValue === 0) {
     // If the conditional is true the current position advances according to the value of the dice
     currentPosition += steps;
@@ -44,7 +44,7 @@ function move(steps) {
   } else {
     // Update the current position
     currentPosition = boardValue;
-    // In this conditional the program examine if the player goes forward or backwards
+    // In this conditional the program examines if the player goes forward or backwards
     if (definePosition < currentPosition) {
       console.log("Jugador sube por escalera al cuadro", currentPosition);
     } else {
